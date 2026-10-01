@@ -106,12 +106,12 @@ header .call .dot{width:8px;height:8px;border-radius:50%;background:#1E8E5A;box-
 .hero .stage .vid video,.hero .stage .vid img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06)}
 .hero .chip{position:absolute;background:#fff;color:var(--navy);border-radius:14px;padding:10px 14px;font-size:13px;font-weight:700;box-shadow:0 14px 40px rgba(0,20,80,.3);display:flex;gap:8px;align-items:center;white-space:nowrap;z-index:3}
 .hero .chip i{width:10px;height:10px;border-radius:50%;background:var(--yellow)}
-.hero .chip.c1{top:6%;left:-4%}.hero .chip.c2{top:48%;right:-8%}.hero .chip.c3{bottom:4%;left:4%}
-.hero .jingle{position:absolute;right:2%;bottom:-2%;z-index:4;display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--navy);border:0;border-radius:999px;padding:10px 16px;font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 14px 40px rgba(0,20,80,.3);transition:transform .2s}
+.hero .chip.c1{top:10%;left:-4%}.hero .chip.c2{top:22%;right:-8%}.hero .chip.c3{bottom:6%;left:-2%}
+.hero .jingle{position:absolute;right:0;top:-6%;z-index:4;display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--navy);border:0;border-radius:999px;padding:10px 16px;font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 14px 40px rgba(0,20,80,.3);transition:transform .2s}
 .hero .jingle:hover{transform:translateY(-2px)}
 .hero .jingle svg{width:16px;height:16px}
 .hero .jingle[aria-pressed="true"]{background:#fff}
-@media (max-width:900px){ .hero .jingle{right:0} }
+@media (max-width:900px){ .hero .jingle{right:0;top:-8%} .hero .chip.c2{top:18%} }
 .hero .bgword{position:absolute;left:-2%;bottom:-2%;font-size:clamp(120px,22vw,320px);font-weight:800;color:rgba(255,255,255,.04);letter-spacing:-.05em;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
 .hero .scrollhint{position:relative;z-index:2;display:flex;justify-content:center;padding:36px 0 22px;color:#C9D4F6;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;gap:10px;align-items:center}
 .hero .scrollhint i{width:1px;height:28px;background:var(--yellow);display:block;animation:drop 1.6s ease-in-out infinite}
