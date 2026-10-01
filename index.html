@@ -163,6 +163,16 @@ header .call .dot{width:8px;height:8px;border-radius:50%;background:#1E8E5A;box-
 .strip figcaption{padding:14px 16px;font-size:14px;font-weight:600;color:#D6E0FF}
 .strip figcaption b{color:#fff;display:block;font-size:15px}
 
+/* story grid */
+.story{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.story figure{margin:0;background:var(--blue-dark);border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3);min-width:0;display:flex;flex-direction:column}
+.story video{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--blue-dark)}
+.story figcaption{padding:16px 18px 20px;font-size:14px;color:#D6E0FF;line-height:1.5}
+.story figcaption b{color:var(--yellow);display:block;font-size:16px;margin-bottom:4px}
+.story figcaption a{color:#fff;text-decoration:none;font-weight:700}
+@media (max-width:1000px){ .story{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:540px){ .story{grid-template-columns:1fr} }
+
 /* steps */
 .how{background:var(--soft)}
 .steps{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);position:relative}
@@ -246,13 +256,13 @@ footer .credit{display:block;margin-top:6px;font-size:11px;color:#8EA0CC;letter-
 <header id="hdr">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="HandyDan home"><img src="logo-full.png" alt="HandyDan: Maintenance, Repairs, Installations" width="1800" height="670"></a>
-    <nav><a href="#services">Services</a><a href="#crew">Dan &amp; Nella</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <nav><a href="#services">Services</a><a href="#crew">The story</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
     <a class="call" href="tel:+35677722299"><span class="dot"></span>Call +356 7772 2299</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 <div class="menu" id="menu">
-  <a href="#services">Services</a><a href="#crew">Dan &amp; Nella</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  <a href="#services">Services</a><a href="#crew">The story</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
   <a class="btn" href="tel:+35677722299">Call +356 7772 2299</a>
 </div>
 
@@ -318,14 +328,16 @@ footer .credit{display:block;margin-top:6px;font-size:11px;color:#8EA0CC;letter-
 
 <section class="crew" id="crew">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Meet the crew</div><h2>Dan does the work. Nella supervises.</h2><p class="lead">Every HandyDan job comes with a four-legged quality inspector. She has never once approved a wonky shelf. Turn the sound on in the advert above for the jingle.</p></div>
-    <div class="strip">
-      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-kitchen.jpg"><source src="clip-kitchen.mp4" type="video/mp4"></video><figcaption><b>Sink sorted.</b>Face washed. Not by choice.</figcaption></figure>
-      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-bathroom.jpg"><source src="clip-bathroom.mp4" type="video/mp4"></video><figcaption><b>Flush fixed.</b>Nella tested it. Nella regrets testing it.</figcaption></figure>
-      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-tv.jpg"><source src="clip-tv.mp4" type="video/mp4"></video><figcaption><b>TV mounted, level.</b>Remote already claimed.</figcaption></figure>
-      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="mascot.jpg"><source src="mascot-loop.mp4" type="video/mp4"></video><figcaption><b>The crew.</b>One call. Sorted.</figcaption></figure>
-      <figure data-reveal><img src="sc-furniture.jpg" alt="" loading="lazy"><figcaption><b>Wardrobe built.</b>Instructions partially eaten.</figcaption></figure>
-      <figure data-reveal><img src="sc-heater.jpg" alt="" loading="lazy"><figcaption><b>Hot water back on.</b>Tape measure held, mostly.</figcaption></figure>
+    <div class="head"><div class="eyebrow">The HandyDan story</div><h2>Eight jobs. One call.</h2><p class="lead">The advert, scene by scene. Every job comes with a four-legged quality inspector; she has never once approved a wonky shelf. Turn the sound on in the advert above for the jingle.</p></div>
+    <div class="story">
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="mascot.jpg"><source src="mascot-loop.mp4" type="video/mp4"></video><figcaption><b>The crew</b><span>Dan does the work. Nella supervises. One number for the whole house: <a href="tel:+35677722299">+356 7772 2299</a>.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-kitchen.jpg"><source src="clip-kitchen.mp4" type="video/mp4"></video><figcaption><b>Plumbing repairs</b><span>Kitchen sinks, taps, mixers, leaks, blocked drains and overflows. Found, fixed, dried. Face-licking optional.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-tv.jpg"><source src="clip-tv.mp4" type="video/mp4"></video><figcaption><b>Mounting &amp; installations</b><span>Televisions, brackets, chandeliers, ceiling fans, shelves, mirrors and curtain rails. Level the first time.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-bathroom.jpg"><source src="clip-bathroom.mp4" type="video/mp4"></video><figcaption><b>Bathrooms</b><span>Toilets and flushes, showers, baths, vanity units, sanitary ware supply and fit, full new-bathroom plumbing.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-electrical.jpg"><source src="clip-electrical.mp4" type="video/mp4"></video><figcaption><b>Electrical</b><span>Light fittings, pendants, sockets, switches and fixtures. Nella holds the torch.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-heater.jpg"><source src="clip-heater.mp4" type="video/mp4"></video><figcaption><b>Water heaters &amp; tanks</b><span>Electric and gas water heaters, roof water tanks, pumps, pressure and irrigation systems. Hot water back on today.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-furniture.jpg"><source src="clip-furniture.mp4" type="video/mp4"></video><figcaption><b>Furniture assembly</b><span>Flat-pack wardrobes, beds, desks, kitchen units and shelving, built and fixed to the wall. Instructions optional.</span></figcaption></figure>
+      <figure data-reveal><video autoplay muted loop playsinline preload="metadata" poster="sc-cleanup.jpg"><source src="clip-cleanup.mp4" type="video/mp4"></video><figcaption><b>Clean-up included</b><span>Every job ends with the room the way we found it, or better. Nella brings the dustpan. Work guaranteed.</span></figcaption></figure>
     </div>
   </div>
 </section>
